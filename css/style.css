@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+/* la url de arriba importa una fuente externa de googlefonts */
 *{
     margin: 0;
     padding: 0;
@@ -19,14 +21,12 @@ main{
     color: white;
 }
 #fondo {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    top: 0;
+    left: 0;
     z-index: -100;
 }
 .contenido{
@@ -43,6 +43,7 @@ main{
 }
 .menu{
     display: flex;
+    flex-wrap: wrap;
     list-style-type:  none;
     justify-content: center;
     margin: 20px;
@@ -247,4 +248,237 @@ main{
     width: 100%;
     height: 100%;
     border-radius: 6px;
+}
+.nosotros{
+    display: grid;
+    grid-template-areas:
+        "somos     somos     publicidad"
+        "nosotros1 nosotros2 publicidad";
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    max-width: 1100px;
+}
+
+.somos{
+    grid-area: somos;
+    border-bottom: 1px solid var(--color3);
+    padding-bottom: 10px;
+}
+.nosotros1{
+    grid-area: nosotros1;
+}
+.nosotros2{
+    grid-area: nosotros2;
+    border-left: 1px dashed var(--color2);
+    padding-left: 20px;
+}
+.publicidad{
+    grid-area: publicidad;
+    text-align: center;
+    border: 1px solid var(--color3);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.nosotros p{
+    text-align: justify;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+.nosotros h3{
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+}
+
+.foto-columna{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.foto-publicidad{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+.tabla{
+    text-align: center;
+}
+.tabla table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabla tr{
+    background: linear-gradient(90deg, #000428, #004e92);
+}
+.tabla th{
+    background-color: black;
+    padding: 10px;
+}
+.tabla td{
+    border: 1px solid var(--color2);
+    padding: 10px;
+}
+.tabla img{
+    width: 250px;
+    margin-top: 15px;
+    border: 5px solid white;
+}
+
+.formulario label{
+    display: block;
+    margin-bottom: 12px;
+}
+.formulario input,
+.formulario textarea{
+    display: block;
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    border: 1px solid var(--color3);
+}
+.formulario button{
+    width: 100%;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+.formulario button:hover{
+    opacity: 0.5;
+}
+.mapa h3{
+    background: linear-gradient(90deg, #000428, #004e92);
+    padding: 10px;
+    text-align: center;
+}
+.mapa iframe{
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+
+.conta{
+    display: grid;
+    grid-template-areas:
+    "tabla formulario"
+    "mapa mapa" ;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 90%;
+   
+}
+.mapa{
+    grid-area: mapa;}
+.formulario{
+    grid-area: formulario;
+}
+.tabla{
+    grid-area: tabla;
+}
+
+/* Fuente externa (Google Fonts) para los títulos */
+h1, h3, .titulo-seccion, .entrada-titulo h2{
+    font-family: 'Orbitron', Arial, sans-serif;
+}
+
+/* Texto en columnas (nosotros.html) */
+.nosotros1 p{
+    column-count: 2;
+    column-gap: 20px;
+    column-rule: 1px dashed var(--color2);
+    column-width: 140px;
+}
+
+/* Aqui empiezan las media queries para tablet */
+@media (max-width: 900px){
+    .nosotros{
+        grid-template-areas:
+            "somos      somos"
+            "nosotros1  nosotros2"
+            "publicidad publicidad";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    .foto-publicidad{
+        height: 250px;
+    }
+}
+
+/* Aqui empiezan las media queries para celular */
+@media (max-width: 600px){
+    .logo{
+        font-size: 1.5rem;
+    }
+    .menu-iconos{
+        margin: 5px;
+    }
+    .menu-iconos li{
+        padding: 5px 6px;
+    }
+    .menu-iconos li a{
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    .contenedor{
+        margin-top: 140px;
+        padding: 15px;
+    }
+
+    .contenido{
+        width: 90%;
+    }
+    .contenido h2{
+        font-size: 1.1rem;
+    }
+    .menu{
+        margin: 10px 0;
+    }
+    .menu li{
+        padding: 10px;
+    }
+
+    .entrada-titulo h2{
+        padding: 0;
+    }
+    .autor{
+        position: static;
+        margin-top: 10px;
+    }
+    .bloque-icono i{
+        font-size: 50px;
+    }
+
+    .nosotros{
+        grid-template-areas:
+            "somos"
+            "nosotros1"
+            "nosotros2"
+            "publicidad";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+    .nosotros2{
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px dashed var(--color2);
+        padding-top: 15px;
+    }
+
+    .conta{
+        grid-template-areas:
+            "tabla"
+            "formulario"
+            "mapa";
+        grid-template-columns: 1fr;
+    }
+    .mapa iframe{
+        height: 250px;
+    }
 }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../img/cascofabicon.png">
+</head>
+<body class="pagina">
+
+    <!-- Aqui empieza la cabecera con el menu -->
+    <header class="cabecera-fija">
+        <h1 class="logo">AlegaVR</h1>
+        <nav>
+            <ul class="menu-iconos">
+                <li><a href="../index.html"><i class="fa-regular fa-heart"></i> Inicio</a></li>
+                <li><a href="nosotros.html"><i class="fa-solid fa-user-group"></i> Nosotros</a></li>
+                <li><a href="blog.html" ><i class="fa-solid fa-pen"></i> Blog</a></li>
+                <li><a href="galeria.html"><i class="fa-solid fa-image"></i> Galería</a></li>
+                <li><a href="videos.html"><i class="fa-solid fa-video"></i> Videos</a></li>
+                <li><a href="contactos.html" class="activo"><i class="fa-solid fa-address-book"></i> Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- Aqui termina la cabecera y empieza el contenido -->
+     <main class="contenedor conta">
+
+        <!-- Aqui empieza la tabla -->
+        <div class="tabla">
+    <table>
+        <tr>
+            <th colspan="2">Información de Contacto</th>
+        </tr>
+        <tr>
+            <td>Dirección</td>
+            <td>Av. Javier Prado 1040 - Lima, Perú</td>
+        </tr>
+        <tr>
+            <td>Teléfonos</td>
+            <td>987 985 456 | (01) 657 2345</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>info@alegavr.com</td>
+        </tr>
+        <tr>
+            <th colspan="2">Horarios de Atención Presencial</th>
+        </tr>
+        <tr>
+            <td colspan="2">Área de Ventas:<br>De lunes a viernes de 8 am a 6 pm</td>
+        </tr>
+    </table>
+
+    <img src="../img/nosotros1.jpg" alt="2-personas-con-vr">
+</div>
+
+<!-- aqui termina la tabla y empieza el formulario -->
+
+
+
+        <form class="formulario" action="" method="post">
+    <label>Nombre y Apellido
+        <input type="text" name="nombre">
+    </label>
+
+    <label>Celular*
+        <input type="tel" name="celular" placeholder="999 999 999" minlength="9" required>
+    </label>
+
+    <label>Correo electrónico*
+        <input type="email" name="correo" placeholder="nombre@dominio.com" required>
+    </label>
+
+    <label>RUC - Empresa (opcional)
+        <input type="text" name="ruc">
+    </label>
+
+    <label>Mensaje
+        <textarea name="mensaje" rows="5" placeholder="Detalla tu experiencia a continuación como punto de inicio"></textarea>
+    </label>
+
+    <button type="submit">Enviar</button>
+
+    <!-- Aqui termina el form y empieza el mapa insertado -->
+</form>
+        <div class="mapa">
+            <h3>Local central</h3> <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31209.53631449094!2d-76.97759515791775!3d-12.099001940620974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c79f5dacafbf%3A0x2aecf92fd4325f0d!2sJockey%20Plaza!5e0!3m2!1ses-419!2spe!4v1793754535423!5m2!1ses-419!2spe" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+        </div>
+
+
+
+
+    </main>
+
+     <!-- Aqui termina el contenido y empieza el pie de pagina -->
+     <footer class="pie">
+        <p>Síguenos en nuestras redes sociales:</p>
+        <ul class="redes">
+            <li><a href="https://x.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
